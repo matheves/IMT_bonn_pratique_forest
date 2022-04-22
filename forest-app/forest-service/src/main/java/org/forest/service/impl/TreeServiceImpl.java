@@ -39,20 +39,38 @@ public class TreeServiceImpl implements TreeService {
         if (tree.birth() == null) {
             throw new IllegalArgumentException("Birth is required");
         }
+
+        // Some other validation rules could be defined here
+
         if (tree.species() == null) {
             throw new IllegalArgumentException("Species is required");
-        }
-
-        if (tree.id() == null) {
-            throw new IllegalArgumentException("Id is required");
         }
 
         if (tree.exposure() == null) {
             throw new IllegalArgumentException("Exposure is required");
         }
 
-        // Some other validation rules could be defined here
+        if (tree.id() == null) {
+            throw new IllegalArgumentException("Id is required");
+        }
 
         return treeRepository.insert(tree);
     }
+
+    @Override
+    public void update(TreeModel tree) {
+        Assert.notNull(tree.id(), "Id is required");
+        treeRepository.updateById(tree.id(), tree);
+    }
+
+    @Override
+    public void delete(TreeModel tree) {
+        treeRepository.delete(tree);
+    }
+
+
+
+
+
+
 }

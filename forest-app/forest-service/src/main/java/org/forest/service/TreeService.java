@@ -16,4 +16,9 @@ public interface TreeService {
     List<TreeModel> list();
 
     TreeModel save(TreeModel tree);
+
+    void update(TreeModel tree);
+
+    void delete(TreeModel tree);
+
 }
