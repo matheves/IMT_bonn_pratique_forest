@@ -1,0 +1,14 @@
+# Project exclude paths
+/.gradle/
+/forest-app/forest-api/build/
+/forest-app/forest-api/build/classes/java/main/
+/forest-app/forest-model/build/
+/forest-app/forest-model/build/classes/java/main/
+/forest-app/forest-persistence/build/
+/forest-app/forest-persistence/build/classes/java/main/
+/forest-app/forest-service/build/
+/forest-app/forest-service/build/classes/java/main/
+/forest-app/forest-service/build/classes/java/test/
+/forest-app/forest-web/build/
+/forest-app/forest-web/build/classes/java/main/
+/forest-app/forest-web/build/classes/java/test/
